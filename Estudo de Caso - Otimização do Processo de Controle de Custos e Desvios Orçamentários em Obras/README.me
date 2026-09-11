@@ -1,0 +1,47 @@
+# Estudo de Caso: Otimização do Processo de Controle de Custos e Desvios Orçamentários em Obras
+
+Documentação de análise de negócios aplicada ao setor de engenharia civil e planejamento de obras, com foco na reestruturação de fluxos operacionais, mitigação de estouros orçamentários e redução do tempo de resposta a desvios financeiros.
+
+## 1. Contexto e Problema de Negócio
+
+Em cenários com múltiplos projetos simultâneos, o acompanhamento de custos costuma ser fragmentado em planilhas manuais geridas por áreas distintas (obra, planejamento, suprimentos e administrativo), sem integração formal com o cronograma físico-financeiro.
+
+Esse formato gera uma defasagem de 3 a 4 semanas entre a ocorrência de um desvio (aditivos, sobrepreço de insumos ou perda de produtividade) e a sua identificação formal, inviabilizando correções em tempo hábil.
+
+O objetivo deste projeto foi estruturar um diagnóstico detalhado do fluxo atual e propor um novo processo padronizado com ciclos semanais de validação e gatilhos de alerta para itens críticos.
+
+## 2. Abordagem Metodológica
+
+A análise foi conduzida utilizando como base as diretrizes do BABOK Guide v3, aliando técnicas de elicitação, modelagem de processos e escrita de requisitos ágeis:
+
+- Business Analysis Core Concept Model (BACCM): Mapeamento das relações entre contexto, necessidade, partes interessadas, solução, valor e mudança.
+- Elicitação de Stakeholders: Identificação de níveis de interesse e influência de gerentes de obra, engenheiros de planejamento, suprimentos e diretoria financeira.
+- Mapeamento AS-IS e TO-BE: Modelagem do fluxo atual e desenho do fluxo proposto utilizando a notação BPMN.
+- Especificação de Requisitos: Separação formal entre requisitos de negócio, funcionais, não funcionais e de transição.
+- Escrita de Histórias de Usuário: Elaboração de User Stories acompanhadas de critérios de aceite objetivos para a equipe de implementação.
+- Matriz de Rastreabilidade: Conexão direta entre objetivos de negócio, requisitos, histórias de usuário e critérios de homologação.
+
+## 3. Arquitetura da Solução Proposta
+
+O processo TO-BE foi desenhado para operar com uma esteira integrada de dados e automação:
+
+- Camada de Coleta: Formulários estruturados com validação de campos obrigatórios e corte de preenchimento semanal.
+- Camada de Consolidação: Base relacional com rotinas de conciliação de Curva S (físico-financeiro) por pacote de serviço.
+- Camada de Automação e Alertas: Rotina de gatilhos automáticos para notificação imediata das lideranças operacionais em caso de desvios acima de 8%.
+- Camada de Visualização: Painel gerencial dinâmico para acompanhamento de indicadores e análise histórica de causas-raiz.
+
+## 4. Indicadores de Sucesso (KPIs)
+
+- Tempo de Identificação do Desvio: Redução do ciclo de detecção de 28 para até 7 dias corridos.
+- Aderência de Preenchimento: Taxa mínima de 90% de entregas de medições pelas áreas fonte dentro da janela limite semanal.
+- Histórico e Lições Aprendidas: Registro obrigatório de causas de desvios para refinamento de margem de contingência em novos orçamentos.
+
+## 5. Estrutura dos Arquivos
+
+- `docs/`: Documento completo da análise de negócio em formato PDF.
+- `diagrams/`: Fluxos BPMN em alta resolução e artefatos de apoio visual.
+
+## Autor
+
+Arthur Guedes Sant'anna  
+Graduado em Análise e Desenvolvimento de Sistemas com atuação voltada a processos, dados e análise de negócios.
