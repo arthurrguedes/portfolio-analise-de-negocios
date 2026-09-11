@@ -1,1 +1,0 @@
-# portfolio-analise-de-negocios
